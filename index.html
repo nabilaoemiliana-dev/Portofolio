@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Emil</title>
+  <meta name="description" content="Portfolio pribadi fresh graduate informatika — proyek, skill, dan kontak." />
+<link rel="icon" href="assets/ikon.jpg" sizes="32x32" type="image/png">  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#" class="brand">Nabila Okta Emiliana</a>
+      <button class="menu-btn" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+      <nav id="site-nav">
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Kepanitiaan</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+      <!-- Hero -->
+  <section id="home" class="section hero">
+    <div class="container hero-inner">
+      <div class="hero-card">
+        <img src="assets/profil.jpg" alt="Foto Profil" class="profile-img"/>
+      </div>
+      <div class="hero-text">
+        <h1>Hai, aku <span class="accent">Emil</span> 👋</h1>
+        <p class="subtitle">Fresh Graduate Informatika · Frontend Developer · Game Developer · Quality Assurance Tester · Mobile Engineer · UI/UX</p>
+        <p class="lead">Di sini kamu dapat melihat beberapa proyek yang sudah pernah aku kerjakan sebelumnya.</p>
+        <div class="cta">
+          <a class="btn" href="assets/CV FIX.pdf" target="_blank" rel="noopener">Download CV</a>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">HTML</div>
+          <div class="skill-card">CSS</div>
+          <div class="skill-card">JavaScript</div>
+          <div class="skill-card">Unity (2D)</div>
+          <div class="skill-card">C#</div>
+          <div class="skill-card">Game Design</div>
+          <div class="skill-card">Game Testing</div>
+          <div class="skill-card">Android (Kotlin)</div>
+          <div class="skill-card">Wireframing</div>
+          <div class="skill-card">UI/UX (basic)</div>
+          <div class="skill-card">Figma (basic)</div>
+          <div class="skill-card">Functional Testing</div>
+          <div class="skill-card">Usability Testing</div>
+          <div class="skill-card">Problem Solving</div>
+          <div class="skill-card">Logical Thinking</div>
+          <div class="skill-card">Teamwork</div>
+          <div class="skill-card">Willingness to Learn</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="card-body">
+              <h3>Game Edukasi Lagu Daerah 2D</h3>
+              <p>Mengembangkan game edukasi 'Lagu Daerah Adventure' secara mandiri mencakup seluruh proses mulai dari perancangan konsep, desain antarmuka, pengembangan kode, pembuatan aset visual dan audio, hingga pengujian (fungsionalitas dan usabilitas) dan rilis.</p>
+              <div class="meta">
+                <span>Unity 2D, C#, Game Development, Game Desain, Game Testing</span>
+              </div>
+              <div class="actions">
+                <a class="btn small" href="https://millowww.itch.io/lagu-daerah-adventure" target="_blank" rel="noopener">itch.io</a>
+                <a class="btn small ghost" href="javascript:void(0)" onclick="openModal('laguModal')">Tentang Project</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3>Midnight Hidden Object Game</h3>
+              <p>Berkontribusi dalam tim dengan membuat konsep game, mendesain objek, logika permainan, dan pengujian fungsionalitas.</p>
+              <div class="meta">
+                <span>Unity 2D, C#, Game Development, Game Desain, Game Testing</span>
+              </div>
+              <div class="actions">
+                <a class="btn small" href="https://drive.google.com/drive/folders/1MZnM1lt8QeCHpjm3PdKaoRkmk5BO4cyV?usp=sharing" target="_blank" rel="noopener">Drive</a>
+                <a class="btn small ghost" href="https://youtu.be/5nyY0YGmtJQ" target="_blank" rel="noopener">Video</a>
+              <a class="btn small ghost" href="javascript:void(0)" onclick="openModal('midnightGame')">Tentang Project</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3>LaundryKu - Website Manajemen Bisnis Laundry</h3>
+              
+              <p>Berkontribusi dalam tim membuat website dengan membuat alur sistem, tampilan frontend, dan memahami struktur database berbasis SQL. Juga melakukan pengujian fungsionalitas dasar</p>
+              <div class="meta">
+                <span>HTML, CSS, JS, Testing</span>
+              </div>
+              <div class="actions">
+                <a class="btn small" href="https://youtu.be/GFtK1qa93BA?si=I5jkK5ccYxdkXol1" target="_blank" rel="noopener">Video</a>
+                <a class="btn small ghost" href="javascript:void(0)" onclick="openModal('posterModal')">Poster</a>
+              <a class="btn small ghost" href="javascript:void(0)" onclick="openModal('webLaundry')">Tentang Project</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3>TravelSage</h3>
+              <p>Merancang UI/UX bersama tim untuk UI/UX website 'TravelSage' dengan membuat wireframe, prototipe interaktif, dan memastikan alur penggunaan mudah dipahami. Juga dalam proses design thinking untuk memahami kebutuhan pengguna.</p>
+              <div class="meta">
+                <span>Figma, Prototyping, UI/UX, Wireframing</span>
+              </div>
+              <div class="actions">
+                <a class="btn small" href="https://www.figma.com/design/SaoNBUmBSHiRZ8YaOTEPU9/TRAVELSAGE" target="_blank" rel="noopener">Demo</a>
+              <a class="btn small ghost" href="javascript:void(0)" onclick="openModal('travelsage')">Tentang Project</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3>Berkain - Website E-Commerce Batik UMKM</h3>
+              <span class="meta-text">🥇 Juara Terfavorit - Mata Kuliah Pengembangan Aplikasi Berbasis Web</span>
+              <p>Berkolaborasi dalam tim untuk mengembangkan website e-commerce 'Berkain' pada bagian front-end fitur login, logout, dan beberapa bagian di home page</p>
+              <div class="meta">
+                <span>HTML, CSS, Frontend Development, Responsive Web, JavaScript, Testing</span>
+              </div>
+              <div class="actions">
+                <a class="btn small" href="https://github.com/zahwaalmira/TubesPABW" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn small ghost" href="javascript:void(0)" onclick="openModal('berkain')">Tentang Project</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3>Emilio - Aplikasi Pengembangan Soft Skill</h3>
+              <span class="meta-text">🥇 Karya Terbaik - Mata Kuliah Pemikiran Desain</span>
+              <p>Berkolaborasi dalam tim untuk merancang UI/UX aplikasi 'Emilio' dengan membuat wireframe dan prototipe. Juga dalam proses design thinking untuk memahami kebutuhan pengguna serta melakukan pengujian kepada pengguna untuk memastikan desain mudah digunakan</p>
+              <div class="meta">
+                <span>Design Thinking, Figma, Problem Solving, UI/UX, Critical Thinking, Testing</span>
+              </div>
+              <div class="actions">
+                <a class="btn small" href="https://www.figma.com/design/mbWxg8VbXq2O8oEv4hErKR/JSON-BERRA?node-id=0-1&t=XHltQAIBIwIBSDs8-1" target="_blank" rel="noopener">Demo</a>
+              <a class="btn small ghost" href="javascript:void(0)" onclick="openModal('emilio')">Tentang Project</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+      <!-- Modal Popup -->
+      <div id="posterModal" class="modal">
+        <div class="modal-box">
+          <span class="close" onclick="closeModal('posterModal')">&times;</span>
+          <h2>Poster LaundryKu</h2>
+          <div class="poster-wrapper">
+            <img src="img/poster-laundryku.png" alt="Poster LaundryKu" />
+          </div>
+        </div>
+        </div>
+
+        <div id="laguModal" class="modal">
+          <div class="modal-box">
+            <span class="close" onclick="closeModal('laguModal')">&times;</span>
+            <h2>Tentang Project - Game Edukasi Lagu Daerah 2D</h2>
+            <p>
+              Game ini merupakan game edukasi 2D berbasis Unity pada platform Windows yang bertujuan untuk mengenalkan lagu daerah Indonesia kepada anak.
+              Terdapat fitur belajar, bermain, dan pencapaian. Dalam fitur belajar pemain dapat belajar lagu daerah yang tersedia dengan melihat video
+              dan informasi mengenai lagu daerah seperti asal lagu, lirik, dan pencipta (jika ada). Dalam fitur bermain, pemain dapat bermain dengan memilih lagu mana yang diinginkan,
+              namun tidak semua lagu dapat dimainkan, terdapat sistem unlock lagu dimana lagu dapat dibuka jika pemain sudah dapat memenangkan lagu daerah sebelumnya. 
+              Sebuah permainan dikatan berhasil jika pemain dapat mengumpulkan minimal 8 tangga lagu, dimana satu tangga nada didapat dengan menjawab potongan lirik lagu daerah dengan benar.
+              Pemain harus mengumpulkan tangga nada ini dengan menggerakan karakter untuk mencari tangga nada dengan waktu dan nyawa yang terbatas. Jika pemain berhasil
+              memenangkan suatu lagu daerah, akan diberikan logo dari daerah tersebut sebagai reward, dan akan dikoleksi pada fitur pencapaian. Pada fitur pencapaian,
+              pemain dapat melihat logo daerah mana saja yang telah berhasil didapat, terdapat progres dan gelar pemain yang ditampilkan dalam fitur pencapaian ini.
+            </p>
+          </div>
+        </div>
+
+        <div id="midnightGame" class="modal">
+          <div class="modal-box">
+            <span class="close" onclick="closeModal('midnightGame')">&times;</span>
+            <h2>Tentang Project - Midnight Hidden Object Game</h2>
+            <p>
+              Game ini merupakan game 2D berbasis Unity pada platform Windows dengan mekanisme hidden object yang bertemakan horor. Pada game ini pemain diminta menemukan objek tertentu
+              pada suatu ruangan dalam waktu yang terbatas sambil menghadapi gangguan dari karakter hantu. Game ini menggunakan sistem unlock level untuk dapat memainkan level selanjutnya.
+            </p>
+          </div>
+        </div>
+
+        <div id="webLaundry" class="modal">
+          <div class="modal-box">
+            <span class="close" onclick="closeModal('webLaundry')">&times;</span>
+            <h2>Tentang Project - LaundryKu - Website Manajemen Bisnis Laundry 2D</h2>
+            <p>
+              Website manajemen laundry yang membantu pemilik usaha mengelola pelanggan, transaksi, dan laporan melalui sistem berbasis web. Aplikasi ini dilengkapi dengan fitur CRUD untuk data pelanggan dan transaksi, serta visualisasi data sederhana dalam bentuk laporan. Dengan fitur ini, pemilik laundry dapat memantau kinerja usaha secara lebih mudah dan menggunakannya sebagai bahan pengambilan keputusan.
+            </p>
+          </div>
+        </div>
+
+        <div id="travelsage" class="modal">
+          <div class="modal-box">
+            <span class="close" onclick="closeModal('travelsage')">&times;</span>
+            <h2>Tentang Project - TravelSage</h2>
+            <p>
+              Website perencanaan perjalanan yang dirancang untuk membantu pengguna membuat rencana liburan lebih mudah dengan fitur pencarian, rekomendasi, dan penjadwalan.
+            </p>
+          </div>
+        </div>
+
+        <div id="berkain" class="modal">
+          <div class="modal-box">
+            <span class="close" onclick="closeModal('berkain')">&times;</span>
+            <h2>Tentang Project - Berkain - Website E-Commerce Batik UMKM</h2>
+            <p>
+              Platform e-commerce sederhana untuk mendukung UMKM batik dalam memasarkan produknya secara online, dilengkapi dengan katalog produk, detail harga, dan fitur checkout.
+            </p>
+          </div>
+        </div>
+
+        <div id="emilio" class="modal">
+          <div class="modal-box">
+            <span class="close" onclick="closeModal('emilio')">&times;</span>
+            <h2>Tentang Project - Game Edukasi Lagu Daerah 2D</h2>
+            <p>
+              Emilio merupakan platform pengembangan soft skill yang menyediakan kelas interaktif dan webinar dengan sertifikat untuk peserta. Aplikasi ini juga dilengkapi dengan fitur chat mentor sebagai sarana bimbingan, serta penjadwalan kegiatan dan pengingat acara agar pengguna dapat mengatur proses belajar dengan lebih terstruktur.
+            </p>
+          </div>
+        </div>
+
+    <!-- Pengalaman -->
+     <section id="experience" class="section">
+  <div class="container">
+    <h2>Pengalaman Organisasi & Kepanitiaan</h2>
+    <div class="experience-grid">
+      <div class="experience-item">
+        <h3>PORSEMATIK 2022 - Acara Perlombaan Tingkat Jurusan</h3>
+        <p><strong>Bendahara</strong> (2022)</p>
+        <p>• Mengelola dan mengawasi alur keuangan acara, termasuk pencatatan pemasukan dan pengeluaran.</p>
+        <p>• Menyusun serta memelihara pembukuan keuangan secara rapi, transparan, dan terstruktur.</p>
+        <p>• Mengevaluasi urgensi serta prioritas pengeluaran untuk kebutuhan acara.</p>
+        <p>• Menyusun laporan pertanggungjawaban keuangan.</p>
+        <p>• Berkoordinasi dengan ketua panitia dan divisi lain untuk memastikan penggunaan dana yang efisien.</p>
+      </div>
+      <div class="experience-item">
+        <h3>PETA FTI 2023 - Ospek Mahasiswa Baru Tingkat Fakultas</h3>
+        <p><strong>Sekretaris Organizing Committee</strong> (2023)</p>
+        <p>• Menyusun dan mengatur jadwal kegiatan panitia serta memastikan kelancaran agenda acara.</p>
+        <p>• Mencatat notulen rapat dan mengatur jalannya rapat dari pembukaan hingga penutupan.</p>
+        <p>• Menyusun dan mengelola administrasi kegiatan serta surat menyurat resmi panitia.</p>
+        <p>• Berkoordinasi dengan ketua Organizing Committee dan divisi terkait dalam hal administrasi kegiatan.</p>
+        <p>• Menyusun laporan pertanggungjawaban setelah acara selesai.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+        
+    <!-- About -->
+    <section id="about" class="section alt">
+      <div class="container about">
+        <div>
+          <h2>About</h2>
+          <p>Saya adalah Fresh Graduate Informatika dengan minat besar di bidang Frontend Development, Game Development, Quality Assurance Testing, Mobile Engineering, serta memiliki pemahaman dasar dalam UI/UX Design.
+Saya dapat mengembangkan sistem berbasis web dan aplikasi mobile. Saya juga pernah membuat game 2D secara mandiri mulai dari tahap desain, pengembangan, hingga pengujian. Selain itu, saya memiliki pemahaman mengenai struktur database dan SQL untuk mendukung pengembangan aplikasi.
+Saya memiliki minat untuk membuat solusi yang user-friendly, responsif, dan berkualitas, serta selalu berusaha meningkatkan skill di bidang UI/UX untuk mendukung pengalaman pengguna yang lebih baik.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <ul class="contact-list">
+          <li>
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24">
+              <path d="M2 4h20v16H2z" fill="none" stroke="currentColor"/>
+              <path d="M22 4L12 13 2 4" fill="none" stroke="currentColor"/>
+            </svg>
+            <a href="mailto:nabilaoemiliana@gmail.com">nabilaoemiliana@gmail.com</a>
+          </li>
+          <li>
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24">
+              <path d="M16 8a6 6 0 11-12 0 6 6 0 0112 0z" fill="none" stroke="currentColor"/>
+              <path d="M20 20l-4.35-4.35" fill="none" stroke="currentColor"/>
+            </svg>
+            <a href="https://www.linkedin.com/in/nabila-okta-emiliana-6a988b379" target="_blank" rel="noopener">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Nabila Okta Emiliana </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

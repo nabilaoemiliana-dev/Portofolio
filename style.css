@@ -1,0 +1,456 @@
+/* 🎨 Simple, clean portfolio styles */
+
+/* 🎨 Warna utama */
+:root {
+  --primary: #3B82F6;   /* biru */
+  --accent:  #F97316;   /* oranye */
+  --bg:      #f9fafb;   /* putih abu muda */
+  --text:    #1f2937;   /* abu tua */
+  --muted:   #6b7280;   /* abu medium */
+  --panel:   #ffffff;   /* panel putih */
+  --border:  #e5e7eb;   /* abu border */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter',system-ui,Arial;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 64px 0;
+  scroll-margin-top: 70px; /* tingginya sama/lebih dikit dari header */
+}
+
+.section.alt {
+  background: var(--panel);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 12px;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-top: -6px;
+}
+
+.lead {
+  color: var(--muted);
+  max-width: 60ch;
+  line-height: 1.6;   /* jarak antar baris */
+  margin: 0 0 24px 0;          /* biar sejajar sama h1 dan tombol */
+  padding: 0;         /* hapus padding ekstra */
+  text-align: left;   /* pastikan rata kiri di desktop */
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  border: 2px solid transparent;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--accent);
+}
+
+.btn.ghost {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.btn.small {
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* 🔝 Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+#site-nav a {
+  margin-left: 16px;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+#site-nav a:hover {
+  background: var(--bg);
+}
+
+.menu-btn {
+  display: none;
+  background: transparent;
+  border: 0;
+  font-size: 22px;
+  color: var(--text);
+}
+
+/* 🏠 Hero */
+.hero-inner {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 0.8fr 1.2fr; /* foto di kiri, teks di kanan */
+  align-items: center;
+}
+
+.hero-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent; /* hapus kotak putih */
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.profile-img {
+  width: 220px;   /* sesuaikan ukuran */
+  height: 220px;
+  border-radius: 50%; /* bikin bulat */
+  object-fit: cover;
+  border: 4px solid var(--primary); /* lingkaran border */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* responsive */
+@media (max-width: 860px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile-img {
+    margin: 0 auto;
+  }
+
+  .lead {
+    max-width: 100%;
+    font-size: 16px;
+    text-align: center;  /* baru rata tengah di layar kecil */
+    padding: 0 10px;     /* kasih jarak biar ga nempel */
+    margin-bottom: 24px; /* jarak tetap ada di mobile */
+  }
+}
+
+
+/* 🔖 Chips */
+.chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 16px 0 0;
+}
+
+.chips li {
+  padding: 8px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+/* 📦 Cards */
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 16px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card .meta {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 8px 0 12px;
+}
+
+.meta-text {
+  display: block; /* biar mirip */
+  font-size: 0.9rem; 
+  color: var(--muted-text); /* samain dengan meta */
+  opacity: 0.8; /* biar pudar */
+  margin-bottom: 6px;
+}
+
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* 👤 About */
+.about {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* 📧 Contact */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+}
+
+/* 🔥 Skills Cards */
+.skills-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  margin-top: 16px;
+}
+
+.skill-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--text);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  border-color: var(--primary);
+}
+
+
+/* ⚓ Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  color: var(--muted);
+}
+
+.card-body p {
+  text-align: justify;
+  line-height: 1.6; /* biar lebih enak dibaca */
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 kolom */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.experience-item {
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 8px;
+  background: var(--panel); /* bisa diganti transparent kalau mau super flat */
+}
+
+
+
+.experience-item h3 {
+  margin-bottom: 5px;
+  color: var(--accent);
+}
+
+.experience-item p {
+  margin: 5px 0;
+  text-align: justify;
+}
+
+
+
+/* 📱 Responsive */
+@media (max-width: 860px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  #site-nav {
+    display: none;
+    position: absolute;
+    top: 64px;
+    right: 12px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 8px;
+  }
+
+  #site-nav.open {
+    display: block;
+  }
+
+  #site-nav a {
+    display: block;
+    margin: 6px 0;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr; /* jadi 1 kolom di HP */
+  }
+}
+/* Modal background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Kotak popup */
+.modal-box {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 200%;   /* atur ukuran popup */
+  width: 40%;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  position: relative;
+  animation: fadeIn 0.3s ease;
+  text-align: justify;
+}
+
+/* Judul */
+.modal-box h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+/* Poster container */
+.poster-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.poster-wrapper img {
+  max-width: 400px;   /* <= batas ukuran gambar */
+  width: 100%;        /* biar responsif */
+  height: auto;
+  border-radius: 8px;
+}
+
+
+/* Tombol close (X) */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ff4d4d;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+
+
