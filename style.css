@@ -185,10 +185,11 @@ h3 {
     padding: 0 10px;     /* kasih jarak biar ga nempel */
     margin-bottom: 24px; /* jarak tetap ada di mobile */
   }
-  .modal-box {
-    width: 40%;
-  }
 }
+@media (min-width: 860px) {
+  .modal-box {
+    width: 60%;       /* popup lebih ramping di desktop */
+  }
 
 
 /* 🔖 Chips */
@@ -404,8 +405,8 @@ h3 {
 .modal-box {
   background: #fff;
   border-radius: 12px;
-  max-width: 200%;   /* atur ukuran popup */
-  width: 90%;
+  max-width: 600px;   /* batas maksimal di desktop */
+  width: 90%;         /* default: hampir penuh di HP */
   padding: 20px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
   position: relative;
