@@ -188,7 +188,7 @@ h3 {
 }
 @media (min-width: 860px) {
   .modal-box {
-    width: 60%;       /* popup lebih ramping di desktop */
+    width: 30%;       /* popup lebih ramping di desktop */
   }
 
 
